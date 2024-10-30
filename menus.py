@@ -1,4 +1,4 @@
-from common import menu
+from common import main
 
 class Menu:
     
@@ -12,10 +12,19 @@ class Menu:
 
     def menuPrincipal():
         Menu.comum()
-        menu()
+        main()
 
     def menuProdutos():
         from produto import Produto
         Menu.comum()
         Produto.menuProdutos()
+
+    def menuPessoas(opcaoMenu):
+        from pessoas import Pessoa
+        Menu.comum()
+        Pessoa.menuPessoas(opcaoMenu)
     
+    def menuVenda():
+        from vendas import Venda
+        Menu.comum()
+        Venda.menuVendas()
